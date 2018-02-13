@@ -1,0 +1,39 @@
+<div class="container-fluid">
+  <div id="chart"></div>
+  <div id="list" class="text-center">
+    <div class="stock-tab" ng-repeat="stock in $ctrl.drawData">
+      <div class="row" ng-show="{{!stock.input}}">
+        <div class="col-sm-9">
+          <h5>
+            {{stock.code}}
+          </h5>
+          <h6>
+            {{stock.snippet}}  
+          </h6>
+        </div>
+        <div class="col-sm-3">
+          <div><h4 class="delete" id="{{stock.code}}" ng-click="$ctrl.delete()">X</h4></div>
+        </div>
+      </div>
+      <div class="row" ng-show="{{stock.input}}">
+        <div class="col-sm-12">
+          <h5>
+            Add stock code:
+          </h5>
+          <div class="row">
+            <div class="input col-sm-8">
+              <input id="input" ng-model="$ctrl.code">
+            </div>
+            <div class="submit col-sm-4">
+              <button class="btn btn-success" ng-click="$ctrl.checkAddCode()">Add</button>
+            </div>
+          </div>
+          <p class="error">
+            {{$ctrl.error}}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h6 class="text-center" id="maxLimit">{{$ctrl.dataLength}}</h6>
+</div>

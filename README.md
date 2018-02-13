@@ -1,1 +1,3 @@
-# Stock-Market-App
+Stock market App
+==========
+Watch the Stock Market
