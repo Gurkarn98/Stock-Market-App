@@ -2,7 +2,7 @@
 angular
   .module('graphData')
   .component('graphData', {
-    templateUrl: "/graph/graph.tempelate.html",
+    templateUrl: "/graph/graph.template.html",
     controller: function graphDataController($scope, $rootScope, $http) {
       var self = this;
       self.error = '';
